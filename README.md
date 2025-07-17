@@ -27,23 +27,23 @@ HamnaQ is a fun and open-source real-time quiz platform inspired by Kahoot. Crea
 
 ## 🛠️ Roadmap
 
-[ ] Quiz creation and editing
+- [ ] Quiz creation and editing
 
-[ ] Basic single-player mode
+- [ ] Basic single-player mode
 
-[ ] Multiplayer sessions (host & join)
+- [ ] Multiplayer sessions (host & join)
 
-[ ] Public quiz explorer
+- [ ] Public quiz explorer
 
-[ ] User login/signup
+- [ ] User login/signup
 
-[ ] Question timers and countdown
+- [ ] Question timers and countdown
 
-[ ] Quiz statistics and analytics
+- [ ] Quiz statistics and analytics
 
-[ ] Mobile-friendly UI
+- [ ] Mobile-friendly UI
 
-[ ] Language and theme support
+- [ ] Language and theme support
 
 
 # 📄 License
