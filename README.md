@@ -16,13 +16,13 @@ HamnaQ is a fun and open-source real-time quiz platform inspired by Kahoot. Crea
 
 ## 🧱 Built With
 
-| Tech         | Purpose                        |
-|--------------|--------------------------------|
-| Blazor Server (.NET 8) | Frontend & backend (C#) |
-| SignalR      | Real-time multiplayer          |
-| EF Core + LiteDB | Data storage & models         |
-| picoCSS      | Clean and lightweight UI       |
-| Tailwind CSS | For full design control and layout customization |
+| Tech                   | Purpose                                          |
+|------------------------|--------------------------------------------------|
+| Blazor Server (.NET 8) | Frontend & backend (C#)                          |
+| SignalR                | Real-time multiplayer                            |
+| EF Core + LiteDB       | Data storage & models                            |
+| picoCSS                | Clean and lightweight UI                         |
+| Tailwind CSS           | For full design control and layout customization |
 
 
 ## 🛠️ Roadmap
