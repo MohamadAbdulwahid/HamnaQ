@@ -1,0 +1,54 @@
+﻿@inject NavigationManager Navigation
+@inject IHttpClientFactory HttpClientFactory
+
+<nav class="navbar is-dark">
+    <div class="navbar-brand px-4">
+        <a href="/" class="logo-container is-flex is-align-items-center">
+            @if (!string.IsNullOrEmpty(svgContent))
+            {
+                @((MarkupString)svgContent)
+            }
+        </a>
+    </div>
+</nav>
+
+<style>
+    .logo-container svg {
+        width: auto;
+        max-width: 100%;
+        
+        height: calc(var(--bulma-navbar-height) - 0.5rem);
+        fill: var(--bulma-white);
+        transition: transform 0.2s ease 0s;
+    }
+
+    .logo-container svg:hover{
+        fill: var(--bulma-primary-dark-invert);
+        transform: scale(1.05);
+    }
+</style>
+
+@code
+{
+    private string svgContent = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadSvgContent();
+    }
+
+    private async Task LoadSvgContent()
+    {
+        try
+        {
+            using var httpClient = HttpClientFactory.CreateClient();
+            httpClient.BaseAddress = new Uri(Navigation.BaseUri);
+            svgContent = await httpClient.GetStringAsync("logo/logo.svg");
+        }
+        catch (Exception ex)
+        {
+            // Log the error or handle it as needed
+            Console.WriteLine($"Error loading SVG: {ex.Message}");
+        }
+    }
+}

@@ -1,3 +1,15 @@
+@import "bulma.css";
+
+:root{
+    /* Top menu height */
+    --bulma-navbar-height: 4rem;
+    
+    /* Bulma primary color */
+    --bulma-primary-h: 189deg;
+    --bulma-primary-s: 94%;
+    --bulma-primary-l: 43%;
+}
+
 h1:focus {
     outline: none;
 }
