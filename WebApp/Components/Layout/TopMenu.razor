@@ -4,9 +4,9 @@
 <nav class="navbar is-dark">
     <div class="navbar-brand px-4">
         <a href="/" class="logo-container is-flex is-align-items-center">
-            @if (!string.IsNullOrEmpty(svgContent))
+            @if (!string.IsNullOrEmpty(_svgContent))
             {
-                @((MarkupString)svgContent)
+                @((MarkupString)_svgContent)
             }
         </a>
     </div>
@@ -30,11 +30,13 @@
 
 @code
 {
-    private string svgContent = string.Empty;
+    private string _svgContent = string.Empty;
 
     protected override async Task OnInitializedAsync()
     {
         await LoadSvgContent();
+        
+        await base.OnInitializedAsync();
     }
 
     private async Task LoadSvgContent()
@@ -43,11 +45,10 @@
         {
             using var httpClient = HttpClientFactory.CreateClient();
             httpClient.BaseAddress = new Uri(Navigation.BaseUri);
-            svgContent = await httpClient.GetStringAsync("logo/logo.svg");
+            _svgContent = await httpClient.GetStringAsync("logo/logo.svg");
         }
         catch (Exception ex)
         {
-            // Log the error or handle it as needed
             Console.WriteLine($"Error loading SVG: {ex.Message}");
         }
     }
