@@ -58,3 +58,9 @@ nunit-*.xml
 
 # Wakatime
 .wakatime-project
+
+# Github Copilot
+.github/
+
+# Personal Files
+DEVELOPMENT_ROADMAP.md
