@@ -64,3 +64,10 @@ nunit-*.xml
 
 # Personal Files
 DEVELOPMENT_ROADMAP.md
+
+# Database files
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
